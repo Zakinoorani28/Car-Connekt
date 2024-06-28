@@ -8,7 +8,7 @@
     <meta name="description" content="Car Connekt">
     <title>Car Connekt | Lets Ride</title>
     <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
 </head>
 
@@ -66,22 +66,202 @@
             </div>
         </header>
 
-        <div class="section-1">
-            <div class="content-1">
-                <h1>Our Top Rentals</h1>
-                <p>Choose from a variety of our amazing vehicles to rent for your next business trip or adventure</p>
-                <img src="assets/vehical.png" alt="vehical">
+        <div class="booking-container">
+            <div class="booking-row">
+                <h2>Plan your trip</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="car"><i class="fa-solid fa-car"></i> Select Your Car</label>
+                <select id="car">
+                    <option value="Tesla Model 3">Tesla Model 3</option>
+                    <option value="Honda Accord">Honda Accord</option>
+                    <option value="Jeep Wagoneer">Jeep Wagoneer</option>
+                    <option value="Ford F-350">Ford F-350</option>
+                    <option value="Mini Cooper S">Mini Cooper S</option>
+                    <option value="Nissan Sentra">Nissan Sentra</option>
+                    <option value="Volkswagen Golf Mk8">Volkswagen Golf Mk8</option>
+                    <option value="Audi E-Tron">Audi E-Tron</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pickup"><i class="fa-solid fa-location-pin"></i> Pick-Up Location</label>
+                <select id="pickup">
+                    <option value="Toronto">Toronto</option>
+                    <option value="Bramptom">Bramptom</option>
+                    <option value="Thunder Bay">Thunder Bay</option>
+                    <option value="Calgary">Calgary</option>
+                    <option value="Victoria">Victoria</option>
+                    <option value="Ottawa">Ottawa</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dropoff"><i class="fa-solid fa-location-pin"></i> Drop-Off Location</label>
+                <select id="dropoff">
+                    <option value="Toronto">Toronto</option>
+                    <option value="Bramptom">Bramptom</option>
+                    <option value="Thunder Bay">Thunder Bay</option>
+                    <option value="Calgary">Calgary</option>
+                    <option value="Victoria">Victoria</option>
+                    <option value="Ottawa">Ottawa</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="departure"><i class="fa-solid fa-calendar"></i> Departure Date</label>
+                <input type="date" id="departure" placeholder="mm/dd/yyyy">
+            </div>
+
+            <div class="form-group">
+                <label for="arrival"><i class="fa-solid fa-calendar"></i> Arrival Date</label>
+                <input type="date" id="arrival" placeholder="mm/dd/yyyy">
+            </div>
+
+            <button class="booking-btn" type="button">Book Now</button>
+        </div>
+
+        <div class="vehical-models">
+            <h2>Our Top Rentals</h2>
+            <p>Choose from a variety of our amazing vehicles to rent for your next business trip or adventure</p>
+        </div>
+
+        <div class="Rental-container">
+
+            <div class="car-list">
+                <button
+                    onclick="carDetails('./assets/tesla.png', '$52/day', 'Tesla', 'Model 3', '2022', 'Automatic', '4')"
+                    data-car="tesla">Tesla Model 3</button>
+                <button
+                    onclick="carDetails('./assets/honda.png', '$38/day', 'Honda', 'Accord', '2022', 'Automatic', '4')"
+                    data-car="honda">Honda Accord</button>
+                <button
+                    onclick="carDetails('./assets/jeep.png', '$45/day', 'Jeep', 'Wrangler', '2021', 'Automatic','4')"
+                    data-car="jeep">Jeep Wrangler</button>
+                <button onclick="carDetails('./assets/ford.png', '$48/day', 'Ford', 'F-350', '2021', 'Automatic', '2')"
+                    data-car="ford">Ford F-350</button>
+                <button onclick="carDetails('./assets/mini.png', '$42/day', 'Mini', 'Cooper S', '2020', 'Manual', '4')"
+                    data-car="mini">Mini Cooper S</button>
+                <button
+                    onclick="carDetails('./assets/nissan.png', '$40/day', 'Nissan', 'Sentra', '2020', 'Automatic', '4')"
+                    data-car="nissan">Nissan Sentra</button>
+                <button
+                    onclick="carDetails('./assets/volkswagon.png', '$49/day', 'Volkswagen', 'Golf MK8', '2022', 'Automatic', '4')"
+                    data-car="volkswagen">Volkswagen Golf MK8</button>
+                <button onclick="carDetails('./assets/audi.png', '$50/day', 'Audi', 'E-Tron', '2023', 'Automatic', '4')"
+                    data-car="audi">Audi E-Tron</button>
+            </div>
+
+            <div class="car-images" id="cars-img">
+                <img src="./assets/tesla.png" alt="Cars">
+            </div>
+
+            <div class="car-details">
+                <div class="price-day">
+                    <h1 id="car-rent">$52/day</h1>
+                </div>
+
+                <div class="details-row">
+                    <p class="text-start">Make</p>
+                    <p class="text-end" id="car-make">Tesla</p>
+
+                    <p class="text-start">Model</p>
+                    <p class="text-end" id="car-model">Model 3</p>
+
+                    <p class="text-start">Year</p>
+                    <p class="text-end" id="car-year">2022</p>
+
+                    <p class="text-start">Transmission</p>
+                    <p class="text-end" id="car-transmission">Automatic</p>
+
+                    <p class="text-start">Doors</p>
+                    <p class="text-end" id="car-doors">4</p>
+                </div>
+
+                <div class="reserve-btn">
+                    <button id="reserve-button">Reserve Now</button>
+                </div>
+
             </div>
         </div>
 
-        <div class="section-2">
-            <div class="content-2">
-                <h1>Save big with Car Connekt</h1>
-                <p>Cheapest rates. Local Suppliers. <span>24/7</span>support.</p>
+        <div class="banner-text">
+            <h2>Save big with Car Connect</h2>
+            <h4>Cheapest rates. Local Suppliers. <span>24/7</span> support.</h4>
+        </div>
+
+        <div class="main-container">
+            <h5>Plan your trip today</h5>
+            <h3>Fast and Effortless Rentals</h3>
+
+            <div class="feature-container">
+                <div class="feature">
+                    <img src="assets/png1.png" alt="icons">
+                    <h4>Select your Car</h4>
+                    <p>We offers a big range of vehicles for all your driving needs. We have the perfect car to meet
+                        your needs</p>
+                </div>
+                <div class="feature">
+                    <img src="assets/png2.png" alt="icons">
+                    <h4>24/7 Operators</h4>
+                    <p>Our knowledgeable and friendly operators are always ready to help with any questions or concerns
+                    </p>
+                </div>
+                <div class="feature">
+                    <img src="assets/png3.png" alt="icons">
+                    <h4>Unlimited Distance</h4>
+                    <p>Whether you're hitting the open road, we've got you covered with our wide range of cars</p>
+                </div>
+            </div>
+
+            <div class="banner-img">
+                <img src="assets/main.png" alt="banner">
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="left-col">
+                <h1>The best deals you will ever find.</h1>
+                <p>Discover the best deals you'll ever find with our unbeatable offers. We're dedicated to providing you
+                    with the best value for your money, so you can enjoy top-quality services and products without
+                    breaking the bank. Our deals are designed to give you the ultimate renting experience, so don't miss
+                    out on your chance to save big.</p>
+                <a href="#" class="btn">Find out more</a>
+            </div>
+            <div class="right-col">
+                <div class="feature-2">
+                    <img src="car_icon.png" alt="Car Icon" class="feature-img">
+                    <div class="feature-text">
+                        <h2>Cross Country Drive</h2>
+                        <p>Take your driving experience to the next level with our top-notch vehicles for your
+                            cross-country adventures.</p>
+                    </div>
+                </div>
+                <div class="feature-2">
+                    <img src="money_icon.png" alt="Money Icon" class="feature-img">
+                    <div class="feature-text">
+                        <h2>All Inclusive Pricing</h2>
+                        <p>Get everything you need in one convenient, transparent price with our all-inclusive pricing
+                            policy.</p>
+                    </div>
+                </div>
+                <div class="feature-2">
+                    <img src="fees_icon.png" alt="Fees Icon" class="feature-img">
+                    <div class="feature-text">
+                        <h2>No Hidden Fees</h2>
+                        <p>Enjoy peace of mind with our no hidden charges policy. We believe in transparent and honest
+                            pricing.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
+
+
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/a7a0423dc4.js" crossorigin="anonymous"></script>
 </body>
 
