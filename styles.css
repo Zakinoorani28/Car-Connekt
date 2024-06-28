@@ -480,60 +480,116 @@ option {
 
 /* 6th  */
 
-.container {
+.find-container {
     display: flex;
-    justify-content: space-between;
-    padding: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 .left-col {
     width: 45%;
     padding-right: 50px;
+    text-align: left;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 0;
+}
+
+.left-col h3 {
+    font-size: calc(1.3rem + .6vw);
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;   
+    color: #212529;
+}
+
+.left-col h1 {
+    color: #212529;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: calc(1.425rem + 2.1vw);
+}
+
+.left-col p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #212529;
+    line-height: 1.5;
+}
+
+.Find-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #569dd0;
+    color: #fff;
+    border: 2px solid #569dd0;
+    border-radius: 2px;
+    transition-duration: 0.2s;
+    font-size: 16px;
+    font-family: Lexend;
+    font-weight: 400;
+}
+
+.Find-btn:hover {
+    background-color: #2980b9;
 }
 
 .right-col {
     width: 45%;
-}
-
-h1 {
-    font-size: 48px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.5;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    max-width: 100%;
 }
 
 .feature-2 {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 30px;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
 }
 
 .feature-2-img {
-    width: 70px;
-    height: 70px;
+flex: 0 0 auto;
+width: 25%;
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+}
+
+.feature-2-img img {
+    vertical-align: middle;
     margin-right: 20px;
 }
 
-.feature-text {
+.feature-2-text {
     flex: 1;
+    padding-left: 1.5rem;
+padding-right: 1.5rem;
 }
+
+.feature-2-text h5 {
+    color: #212529;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: bolder;
+    line-height: 1.2;
+    font-size: 1.25rem;
+}
+
+.feature-2-text p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* 7  */
+
